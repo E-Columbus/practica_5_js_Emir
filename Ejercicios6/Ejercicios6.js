@@ -141,6 +141,68 @@ for (let index=0; index < cicloFor.length; index++){
    NOTA: se desea el uso de funciones y crear un sistema modulos
          de separación de archivos. */
 
+// DESCOMPOSICION DE STRING EN ARRAY
+
+let str = "*.?/x!#&¿q"
+
+var arrayUnido5 = str.split('')
+
+// UNION DE CLAVES Y VALORES POR INYECCION EN ARRAY
+
+arrayUnido5.splice(1,0,"0")
+arrayUnido5.splice(3,0,"1")
+arrayUnido5.splice(5,0,"2")
+arrayUnido5.splice(7,0,"3")
+arrayUnido5.splice(9,0,"4")
+arrayUnido5.splice(11,0,"5")
+arrayUnido5.splice(13,0,"6")
+arrayUnido5.splice(15,0,"7")
+arrayUnido5.splice(17,0,"8")
+arrayUnido5.splice(19,0,"9")
+
+console.log (arrayUnido5)
+
+// DESCIFRADO DE SIMBOLO A NUMERO (UNA POSICION HACIA ADELANTE)
+
+function descifrado(str) {
+  // crear variable vacia
+  let resultadoFinal = '';
+
+  // iterar el string
+  for (let i = 0; i < str.length; i++) {
+    const posicionEnArray = str[i];
+
+  // saltar 1 posicion adelante            + or - 1, add to acc
+      const charIndex = arrayUnido5.findIndex((c) => c === posicionEnArray);
+
+      resultadoFinal += arrayUnido5[charIndex + 1] // stringNew[charIndex - 1];
+    
+  }
+  return resultadoFinal;
+}
+
+console.log(descifrado('.**'));
+
+// CIFRADO DE NUMERO A SIMBOLO (UNA POSICION HACIA ATRAS)
+
+function cifrado(str) {
+  // crear variable vacia
+  let resultadoFinal = '';
+
+  // iterar el string
+  for (let i = 0; i < str.length; i++) {
+    const posicionEnArray = str[i];
+
+  // saltar una posicion atras
+      const charIndex = arrayUnido5.findIndex((c) => c === posicionEnArray);
+
+      resultadoFinal += arrayUnido5[charIndex - 1]
+    
+  }
+  return resultadoFinal;
+}
+
+console.log(cifrado('100'));
 
 /* ==========================================
 6) const c = [
@@ -206,5 +268,5 @@ lineas();
 menu.push("agua")
 
 menu.map(function(options7 , i){
-  console.log (` ${i + 1}) ${options7}`, "\n",`${"-".repeat(19)}` )
+  console.log (` ${i+1}) ${options7}`, "\n",`${"-".repeat(19)}` )
 })
