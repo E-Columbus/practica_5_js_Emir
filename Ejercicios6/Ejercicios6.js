@@ -147,7 +147,7 @@ let str = "*.?/x!#&¿q"
 
 var arrayUnido5 = str.split('')
 
-// UNION DE CLAVES Y VALORES POR INYECCION EN ARRAY
+// UNION DE SIMBOLOS Y NUMEROS POR INYECCION EN UN SOLO ARRAY
 
 arrayUnido5.splice(1,0,"0")
 arrayUnido5.splice(3,0,"1")
@@ -168,14 +168,14 @@ function descifrado(str) {
   // crear variable vacia
   let resultadoFinal = '';
 
-  // iterar el string
+  // iterar el array
   for (let i = 0; i < str.length; i++) {
     const posicionEnArray = str[i];
 
-  // saltar 1 posicion adelante            + or - 1, add to acc
+  // saltar una posicion adelante
       const charIndex = arrayUnido5.findIndex((c) => c === posicionEnArray);
 
-      resultadoFinal += arrayUnido5[charIndex + 1] // stringNew[charIndex - 1];
+      resultadoFinal += arrayUnido5[charIndex + 1]
     
   }
   return resultadoFinal;
@@ -189,7 +189,7 @@ function cifrado(str) {
   // crear variable vacia
   let resultadoFinal = '';
 
-  // iterar el string
+  // iterar el array
   for (let i = 0; i < str.length; i++) {
     const posicionEnArray = str[i];
 
