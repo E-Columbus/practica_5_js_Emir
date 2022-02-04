@@ -301,9 +301,9 @@ var cryptoArray = [B , E , U ]
 
 for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
   } if (cryptoArray[0] > cryptoArray[1]) {
-     console.log("Bitcoin vale mas en dolares que Ethereum ---->" , BTC.current , ">" , ETH.current)
+     console.log("Bitcoin vale mas en dolares que Ethereum:" , BTC.current , ">" , ETH.current)
    }else{
-     console.log ("Ethereum vale mas en dolares que Bitcoin ---->" , BTC.current , "<" , ETH.current)
+     console.log ("Ethereum vale mas en dolares que Bitcoin:" , BTC.current , "<" , ETH.current)
    }
 
 for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
