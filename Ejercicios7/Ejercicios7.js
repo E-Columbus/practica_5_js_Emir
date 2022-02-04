@@ -301,14 +301,14 @@ var cryptoArray = [B , E , U ]
 
 for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
   } if (cryptoArray[0] > cryptoArray[1]) {
-     console.log( "Bitcoin vale mas en dolares que Ethereum")
+     console.log("Bitcoin vale mas en dolares que Ethereum ---->" , BTC.current , ">" , ETH.current)
    }else{
-     console.log ("Ethereum vale mas en dolares que bitcoin")
+     console.log ("Ethereum vale mas en dolares que Bitcoin ---->" , BTC.current , "<" , ETH.current)
    }
 
 for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
   } if (cryptoArray[0] > cryptoArray[2]) {
-     console.log("Bitcoin vale mas en dolares que USDT")
+     console.log("Bitcoin vale mas en dolares que USDT:" , BTC.current , ">" , USDT.current)
    }else{
-     console.log ("USDT vale mas en dolares que Bitcoin")
+     console.log ("USDT vale mas en dolares que Bitcoin:" , BTC.current , "<" , USDT.current)
    }
