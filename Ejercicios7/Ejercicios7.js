@@ -35,7 +35,7 @@ https://github.com/axios/axios
 
 npm install axios */
 
-//---- PARTE 1 (PROMESAS) ------------
+//---- PARTE 1 (PROMESAS) ------------ 
 
 const axios1 = require ("axios")
 
@@ -282,7 +282,16 @@ return BTC + ETH
 }
 
 var sumResult = UnstableCoinsSum (100 , 1000);
-console.log (" Stablecoin total:" ,`$`, USDT.usd , "\n", "Unstablecoin total:" , "$", sumResult)
+console.log ("Unstablecoin total:" , "$" + sumResult)
+
+var StablecoinCheck = function(){
+if (USDT.stableCoin == true){
+return `Stablecoin total: $` + USDT.usd
+}
+}
+
+var result = StablecoinCheck ()
+console.log (result)
 
 let B = BTC.current
 let E = ETH.current
