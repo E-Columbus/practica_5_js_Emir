@@ -127,46 +127,30 @@ el total de personas que compone el array.
 */
 
 let personas = [{
-  nombre: "foo",
-  edad: 18
+nombre: "foo",
+edad: 18
 },
 {
-  nombre: "bar",
-  edad: 17
+nombre: "bar",
+edad: 17
 },
 {
-  nombre: "zap",
-  edad: 40
+nombre: "zap",
+edad: 40
 },
 {
-  nombre: "qux",
-  edad: 19
+nombre: "qux",
+edad: 19
 }
 ];
 
-for (var personasPos = 0 ; personasPos <= 2; personasPos++){
-} if (personas[0].edad >= 18){
-      console.log("foo es mayor de edad")
-    }else{
-      console.log ("foo es menor de edad")
-    }
-      if (personas[1].edad >= 18){
-          console.log("bar es mayor de edad")
-        }else{
-          console.log ("bar es menor de edad")
-      }
-      if (personas[2].edad >= 18){
-          console.log("zap es mayor de edad")
-        }else{
-          console.log ("zap es menor de edad")
-        }
-      
-      if (personas[3].edad >= 18){
-          console.log("qux es mayor de edad")
-        }else{
-          console.log ("qux es menor de edad")
-    }
-    
+for (var personasPos = 0 ; personasPos <= 3; personasPos++){
+} if (personas[3].edad >= 18){
+    console.log("La persona es mayor de edad")
+  }else{
+    console.log ("La persona es menor de edad")
+  }
+
 var index = 0
 var length = personas.length;
 console.log ("Hay", length ,"personas en el array");
@@ -198,28 +182,25 @@ let Perro = {
 class Can {
 
   constructor (ladra,cantidadDePatas){
-  this.ladra = true
-  this.cantidadDePatas = 4
-  this.correr = "corriendo"
-  this.salta = "saltando"
+  this.ladra = ladra;
+  this.cantidadDePatas = cantidadDePatas;
 }
-correrYsaltar(){
-  return [this.correr , this.salta]  
-  }
+correr() {
+return "corriendo";
+}
+salta() {
+return "saltando"
+}
 };
 
 class Perro extends Can {
 constructor(ladra,cantidadDePatas,nombre){
-super(ladra,cantidadDePatas,nombre)
-this.nombre = "tornado"
-}
-
-wrapAccionablesHeredados(){
-return [...this.correrYsaltar()]
+super(ladra,cantidadDePatas)
+this.nombre = nombre;
 }
 }
 
-const PerroFinal = new Perro ()
+const PerroFinal = new Perro(true, 4,"tornado")
 
 console.log ("=========================")
 console.log ("Perfil Completo del Perro")
@@ -229,7 +210,8 @@ console.log ("Ladra?", PerroFinal.ladra)
 console.log ("Cantidad de patas?", PerroFinal.cantidadDePatas)
 console.log ("Cual es su nombre?", PerroFinal.nombre)
 
-console.log ("Que esta haciendo?", PerroFinal.wrapAccionablesHeredados())
+console.log ("Que esta haciendo?", PerroFinal.correr())
+console.log ("Que esta haciendo?", PerroFinal.salta())
 
 // ====================================================================
 
@@ -297,18 +279,11 @@ let B = BTC.current
 let E = ETH.current
 let U = USDT.current
 
-var cryptoArray = [B , E , U ]
+var cryptoArray = [B , E , U]
 
-for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
-  } if (cryptoArray[0] > cryptoArray[1]) {
-     console.log("Bitcoin vale mas en dolares que Ethereum:" , BTC.current , ">" , ETH.current)
-   }else{
-     console.log ("Ethereum vale mas en dolares que Bitcoin:" , BTC.current , "<" , ETH.current)
-   }
-
-for (var cryptoPos = 0 ; cryptoPos <= 2; cryptoPos++){
-  } if (cryptoArray[0] > cryptoArray[2]) {
-     console.log("Bitcoin vale mas en dolares que USDT:" , BTC.current , ">" , USDT.current)
-   }else{
-     console.log ("USDT vale mas en dolares que Bitcoin:" , BTC.current , "<" , USDT.current)
-   }
+for (var cryptoPos = 0 ; cryptoPos <= 0; cryptoPos++){
+} if (cryptoArray[cryptoPos] > cryptoArray[cryptoPos+1]) {
+   console.log("Moneda con mayor cotizacion en Dolares: Bitcoin" , BTC.current)
+ }else{
+   console.log ("Otra altcoin tiene mas cotizacion")
+ }
